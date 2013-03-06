@@ -1,0 +1,734 @@
+/******************************
+*
+*  RoyalSlider White Controls Skin
+*
+*    1. Arrows
+*    2. Bullets
+*    3. Thumbnails
+*    4. Tabs
+*    5. Fullscreen button
+*    6. Play/close video button
+*    7. Preloader
+*    8. Caption
+*
+*  Sprite: 'rs-minimal-white.png'
+*  Feel free to edit anything
+*  If you don't some part - just delete it
+*
+******************************/
+/* Background */
+/* line 26, ../sass/_skin.scss */
+.rsMinW,
+.rsMinW .rsOverflow,
+.rsMinW .rsSlide,
+.rsMinW .rsVideoFrameHolder,
+.rsMinW .rsThumbs {
+  background: #000;
+  color: #FFF; }
+
+/***************
+*
+*  1. Arrows
+*
+****************/
+/* line 38, ../sass/_skin.scss */
+.rsMinW .rsArrow {
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  z-index: 21; }
+
+/* line 47, ../sass/_skin.scss */
+.rsMinW .rsArrowLeft {
+  right: 37px;
+  bottom: 7px; }
+
+/* line 48, ../sass/_skin.scss */
+.rsMinW .rsArrowRight {
+  right: 7px;
+  bottom: 7px; }
+
+/* line 50, ../sass/_skin.scss */
+.rsMinW .rsArrowIcn {
+  width: 24px;
+  height: 24px;
+  margin-top: 3px;
+  margin-left: 3px;
+  position: absolute;
+  cursor: pointer;
+  background: url("rs-minimal-white.png") transparent;
+  border-radius: 2px; }
+
+/* line 66, ../sass/_skin.scss */
+.rsMinW.rsHor .rsArrowLeft .rsArrowIcn {
+  background-position: -68px -36px; }
+
+/* line 67, ../sass/_skin.scss */
+.rsMinW.rsHor .rsArrowRight .rsArrowIcn {
+  background-position: -68px -68px; }
+
+/* line 69, ../sass/_skin.scss */
+.rsMinW.rsVer .rsArrowLeft .rsArrowIcn {
+  background-position: -100px -36px; }
+
+/* line 70, ../sass/_skin.scss */
+.rsMinW.rsVer .rsArrowRight .rsArrowIcn {
+  background-position: -100px -68px; }
+
+/* line 72, ../sass/_skin.scss */
+.rsMinW .rsArrowDisabled .rsArrowIcn {
+  opacity: 0.3 !important;
+  filter: alpha(opacity=30);
+  *display: none; }
+
+/***************
+*
+*  2. Bullets
+*
+****************/
+/* line 81, ../sass/_skin.scss */
+.rsMinW .rsBullets {
+  position: absolute;
+  bottom: 15px;
+  right: 73px;
+  z-index: 35;
+  padding-top: 4px;
+  height: auto;
+  text-align: center;
+  line-height: 6px;
+  overflow: hidden; }
+
+/* line 93, ../sass/_skin.scss */
+.rsMinW .rsBullet {
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  padding: 6px 5px 6px 4px; }
+
+/* line 101, ../sass/_skin.scss */
+.rsMinW .rsBullet span {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #CCC;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1); }
+
+/* line 110, ../sass/_skin.scss */
+.rsMinW .rsBullet.rsNavSelected span {
+  background: #FFF; }
+
+/***************
+*
+*  3. Thumbnails
+*
+****************/
+/* line 124, ../sass/_skin.scss */
+.rsMinW .rsThumbsHor {
+  width: 100%;
+  height: auto; }
+
+/* line 128, ../sass/_skin.scss */
+.rsMinW .rsThumbsVer {
+  width: 96px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+/* line 135, ../sass/_skin.scss */
+.rsMinW.rsWithThumbsHor .rsThumbsContainer {
+  position: relative;
+  height: 100%; }
+
+/* line 139, ../sass/_skin.scss */
+.rsMinW.rsWithThumbsVer .rsThumbsContainer {
+  position: relative;
+  width: 100%; }
+
+/* line 143, ../sass/_skin.scss */
+.rsMinW .rsThumb {
+  float: left;
+  overflow: hidden;
+  width: 96px;
+  height: 72px; }
+
+/* line 149, ../sass/_skin.scss */
+.rsMinW .rsThumb img {
+  width: 100%;
+  height: 100%; }
+
+/* line 153, ../sass/_skin.scss */
+.rsMinW .rsThumb.rsNavSelected {
+  background: #333; }
+
+/* line 156, ../sass/_skin.scss */
+.rsMinW .rsThumb.rsNavSelected img {
+  filter: alpha(opacity=40);
+  opacity: 0.7; }
+
+/* line 160, ../sass/_skin.scss */
+.rsMinW .rsThumb.rsNavSelected span.thumbIco {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 2px solid white;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  -webkit-backface-visibility: hidden; }
+
+/* line 170, ../sass/_skin.scss */
+.rsMinW .rsTmb {
+  display: block; }
+
+/* Thumbnails arrow icons */
+/* line 178, ../sass/_skin.scss */
+.rsMinW .rsThumbsArrow {
+  height: 100%;
+  width: 20px;
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  z-index: 21; }
+
+/* line 186, ../sass/_skin.scss */
+.rsMinW.rsWithThumbsVer .rsThumbsArrow {
+  width: 100%;
+  height: 20px; }
+
+/* line 190, ../sass/_skin.scss */
+.rsMinW.rsWithThumbsVer .rsThumbsArrowLeft {
+  top: 0;
+  left: 0; }
+
+/* line 191, ../sass/_skin.scss */
+.rsMinW.rsWithThumbsVer .rsThumbsArrowRight {
+  bottom: 0;
+  left: 0; }
+
+/* line 193, ../sass/_skin.scss */
+.rsMinW.rsWithThumbsHor .rsThumbsArrowLeft {
+  left: 0;
+  top: 0; }
+
+/* line 194, ../sass/_skin.scss */
+.rsMinW.rsWithThumbsHor .rsThumbsArrowRight {
+  right: 0;
+  top: 0; }
+
+/* line 196, ../sass/_skin.scss */
+.rsMinW .rsThumbsArrowIcn {
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  margin-top: -8px;
+  margin-left: -8px;
+  position: absolute;
+  cursor: pointer;
+  background: url("rs-minimal-white.png"); }
+
+/* line 208, ../sass/_skin.scss */
+.rsMinW.rsWithThumbsHor .rsThumbsArrowLeft .rsThumbsArrowIcn {
+  background-position: -128px -32px; }
+
+/* line 209, ../sass/_skin.scss */
+.rsMinW.rsWithThumbsHor .rsThumbsArrowRight .rsThumbsArrowIcn {
+  background-position: -128px -48px; }
+
+/* line 211, ../sass/_skin.scss */
+.rsMinW.rsWithThumbsVer .rsThumbsArrowLeft .rsThumbsArrowIcn {
+  background-position: -144px -32px; }
+
+/* line 212, ../sass/_skin.scss */
+.rsMinW.rsWithThumbsVer .rsThumbsArrowRight .rsThumbsArrowIcn {
+  background-position: -144px -48px; }
+
+/* line 214, ../sass/_skin.scss */
+.rsMinW .rsThumbsArrowDisabled {
+  display: none !important; }
+
+/* Thumbnails resizing on smaller screens */
+@media screen and (min-width: 0px) and (max-width: 800px) {
+  /* line 218, ../sass/_skin.scss */
+  .rsMinW .rsThumb {
+    width: 59px;
+    height: 44px; }
+
+  /* line 222, ../sass/_skin.scss */
+  .rsMinW .rsThumbsHor {
+    height: 44px; }
+
+  /* line 225, ../sass/_skin.scss */
+  .rsMinW .rsThumbsVer {
+    width: 59px; } }
+/***************
+*
+*  4. Tabs
+*
+****************/
+/* line 239, ../sass/_skin.scss */
+.rsMinW .rsTabs {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+  padding-top: 12px;
+  position: relative; }
+
+/* line 246, ../sass/_skin.scss */
+.rsMinW .rsTab {
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  height: auto;
+  width: auto;
+  color: #333;
+  padding: 5px 13px 6px;
+  min-width: 72px;
+  border: 1px solid #d9d9dd;
+  border-right: 1px solid whitesmoke;
+  text-decoration: none;
+  background-color: #000;
+  background-image: -webkit-linear-gradient(top, #fefefe, #f4f4f4);
+  background-image: -moz-linear-gradient(top, #fefefe, #f4f4f4);
+  background-image: linear-gradient(to bottom, #fefefe, #f4f4f4);
+  *display: inline;
+  *zoom: 1; }
+
+/* line 267, ../sass/_skin.scss */
+.rsMinW .rsTab:first-child {
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px; }
+
+/* line 273, ../sass/_skin.scss */
+.rsMinW .rsTab:last-child {
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-right: 1px solid #cfcfcf; }
+
+/* line 281, ../sass/_skin.scss */
+.rsMinW .rsTab:active {
+  border: 1px solid #d9d9dd;
+  background-color: #f4f4f4;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2) inset; }
+
+/* line 286, ../sass/_skin.scss */
+.rsMinW .rsTab.rsNavSelected {
+  color: #000;
+  border: 1px solid #999999;
+  text-shadow: 1px 1px #838383;
+  box-shadow: 0 1px 9px rgba(102, 102, 102, 0.65) inset;
+  background: #ACACAC;
+  background-image: -webkit-linear-gradient(top, #acacac, #bbbbbb);
+  background-image: -moz-llinear-gradient(top, #acacac, #bbbbbb);
+  background-image: linear-gradient(to bottom, #acacac, #bbbbbb); }
+
+/***************
+*
+*  5. Fullscreen button
+*
+****************/
+/* line 307, ../sass/_skin.scss */
+.rsMinW .rsFullscreenBtn {
+  right: 0;
+  top: 0;
+  width: 44px;
+  height: 44px;
+  z-index: 22;
+  display: block;
+  position: absolute;
+  cursor: pointer; }
+
+/* line 318, ../sass/_skin.scss */
+.rsMinW .rsFullscreenIcn {
+  display: block;
+  margin: 6px;
+  width: 32px;
+  height: 32px;
+  background: url("rs-minimal-white.png") 0 0 transparent; }
+
+/* line 326, ../sass/_skin.scss */
+.rsMinW .rsFullscreenIcn:hover {
+  opacity: 0.8; }
+
+/* line 329, ../sass/_skin.scss */
+.rsMinW.rsFullscreen .rsFullscreenIcn {
+  background-position: -32px 0; }
+
+/***************
+*
+*  6. Play/close video button
+*
+****************/
+/* line 343, ../sass/_skin.scss */
+.rsMinW .rsPlayBtn {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+  width: 64px;
+  height: 64px;
+  margin-left: -32px;
+  margin-top: -32px;
+  cursor: pointer; }
+
+/* line 351, ../sass/_skin.scss */
+.rsMinW .rsPlayBtnIcon {
+  width: 64px;
+  display: block;
+  height: 64px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  transition: .3s;
+  background: url(rs-minimal-white.png) no-repeat 0 -32px;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.75);
+  *background-color: #000; }
+
+/* line 367, ../sass/_skin.scss */
+.rsMinW .rsPlayBtn:hover .rsPlayBtnIcon {
+  background-color: rgba(0, 0, 0, 0.9); }
+
+/* line 370, ../sass/_skin.scss */
+.rsMinW .rsBtnCenterer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 20px;
+  height: 20px; }
+
+/* line 377, ../sass/_skin.scss */
+.rsMinW .rsCloseVideoBtn {
+  right: 0;
+  top: 0;
+  width: 44px;
+  height: 44px;
+  z-index: 500;
+  position: absolute;
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0); }
+
+/* line 389, ../sass/_skin.scss */
+.rsMinW .rsCloseVideoBtn.rsiOSBtn {
+  top: -38px;
+  right: -6px; }
+
+/* line 394, ../sass/_skin.scss */
+.rsMinW .rsCloseVideoIcn {
+  margin: 6px;
+  width: 32px;
+  height: 32px;
+  background: url("rs-minimal-white.png") -64px 0;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.75);
+  *background-color: #000; }
+
+/* line 403, ../sass/_skin.scss */
+.rsMinW .rsCloseVideoIcn:hover {
+  background-color: rgba(0, 0, 0, 0.9); }
+
+/***************
+*
+*  7. Preloader
+*
+****************/
+/* line 415, ../sass/_skin.scss */
+.rsMinW .rsPreloader {
+  width: 20px;
+  height: 20px;
+  background-image: url(../preloaders/preloader-white.gif);
+  left: 50%;
+  top: 50%;
+  margin-left: -10px;
+  margin-top: -10px; }
+
+/***************
+*
+*  8. Global caption
+*
+****************/
+/* line 434, ../sass/_skin.scss */
+.rsMinW .rsGCaption {
+  position: absolute;
+  float: none;
+  bottom: 6px;
+  left: 6px;
+  text-align: left;
+  background: #000;
+  background: rgba(0, 0, 0, 0.75);
+  color: #FFF;
+  padding: 2px 8px;
+  width: auto;
+  font-size: 12px;
+  border-radius: 2px; }
+
+/* v1.0.3 */
+/* Core RS CSS file. 95% of time you shouldn't change anything here. */
+/* line 4, ../sass/royalslider.scss */
+.royalSlider {
+  width: 600px;
+  height: 400px;
+  position: relative;
+  direction: ltr; }
+
+/* line 10, ../sass/royalslider.scss */
+.royalSlider > * {
+  float: left; }
+
+/* line 22, ../sass/royalslider.scss */
+.rsWebkit3d .rsSlide,
+.rsWebkit3d .rsContainer,
+.rsWebkit3d .rsThumbs,
+.rsWebkit3d .rsPreloader,
+.rsWebkit3d img,
+.rsWebkit3d .rsOverflow,
+.rsWebkit3d .rsBtnCenterer,
+.rsWebkit3d .rsAbsoluteEl {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0); }
+
+/* line 28, ../sass/royalslider.scss */
+.rsFade.rsWebkit3d .rsSlide,
+.rsFade.rsWebkit3d img,
+.rsFade.rsWebkit3d .rsContainer {
+  -webkit-transform: none; }
+
+/* line 31, ../sass/royalslider.scss */
+.rsOverflow {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+/* line 39, ../sass/royalslider.scss */
+.rsVisibleNearbyWrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+/* line 48, ../sass/royalslider.scss */
+.rsVisibleNearbyWrap .rsOverflow {
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+/* line 54, ../sass/royalslider.scss */
+.rsContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+/* line 62, ../sass/royalslider.scss */
+.rsArrow,
+.rsThumbsArrow {
+  cursor: pointer; }
+
+/* line 66, ../sass/royalslider.scss */
+.rsThumb {
+  float: left;
+  position: relative; }
+
+/* line 74, ../sass/royalslider.scss */
+.rsArrow,
+.rsNav,
+.rsThumbsArrow {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s linear;
+  -moz-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear; }
+
+/* line 81, ../sass/royalslider.scss */
+.rsHidden {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0s linear 0.3s, opacity 0.3s linear;
+  -moz-transition: visibility 0s linear 0.3s, opacity 0.3s linear;
+  -o-transition: visibility 0s linear 0.3s, opacity 0.3s linear;
+  transition: visibility 0s linear 0.3s, opacity 0.3s linear; }
+
+/* line 91, ../sass/royalslider.scss */
+.rsGCaption {
+  width: 100%;
+  float: left;
+  text-align: center; }
+
+/* Fullscreen options, very important ^^ */
+/* line 98, ../sass/royalslider.scss */
+.royalSlider.rsFullscreen {
+  position: fixed !important;
+  height: auto !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 2147483647 !important;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important; }
+
+/* line 111, ../sass/royalslider.scss */
+.royalSlider .rsSlide.rsFakePreloader {
+  opacity: 1 !important;
+  -webkit-transition: 0s;
+  -moz-transition: 0s;
+  -o-transition: 0s;
+  transition: 0s;
+  display: none; }
+
+/* line 120, ../sass/royalslider.scss */
+.rsSlide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  overflow: hidden;
+  height: 100%;
+  width: 100%; }
+
+/* line 132, ../sass/royalslider.scss */
+.royalSlider.rsAutoHeight,
+.rsAutoHeight .rsSlide {
+  height: auto; }
+
+/* line 136, ../sass/royalslider.scss */
+.rsContent {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+/* line 142, ../sass/royalslider.scss */
+.rsPreloader {
+  position: absolute;
+  z-index: 0; }
+
+/* line 147, ../sass/royalslider.scss */
+.rsNav {
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  user-select: none; }
+
+/* line 152, ../sass/royalslider.scss */
+.rsNavItem {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.25); }
+
+/* line 156, ../sass/royalslider.scss */
+.rsThumbs {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  z-index: 22; }
+
+/* line 163, ../sass/royalslider.scss */
+.rsTabs {
+  float: left;
+  background: none !important; }
+
+/* line 168, ../sass/royalslider.scss */
+.rsTabs,
+.rsThumbs {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+/* line 174, ../sass/royalslider.scss */
+.rsVideoContainer {
+  /*left: 0;
+  top: 0;
+  position: absolute;*/
+  /*width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  float: left;*/
+  width: auto;
+  height: auto;
+  line-height: 0;
+  position: relative; }
+
+/* line 189, ../sass/royalslider.scss */
+.rsVideoFrameHolder {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #141414;
+  opacity: 0;
+  -webkit-transition: .3s; }
+
+/* line 197, ../sass/royalslider.scss */
+.rsVideoFrameHolder.rsVideoActive {
+  opacity: 1; }
+
+/* line 203, ../sass/royalslider.scss */
+.rsVideoContainer iframe,
+.rsVideoContainer video,
+.rsVideoContainer embed,
+.rsVideoContainer .rsVideoObj {
+  position: absolute;
+  z-index: 50;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; }
+
+/* ios controls over video bug, shifting video */
+/* line 214, ../sass/royalslider.scss */
+.rsVideoContainer.rsIOSVideo iframe,
+.rsVideoContainer.rsIOSVideo video,
+.rsVideoContainer.rsIOSVideo embed {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-right: 44px; }
+
+/* line 221, ../sass/royalslider.scss */
+.rsABlock {
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 15;
+  -webkit-backface-visibility: hidden; }
+
+/* line 229, ../sass/royalslider.scss */
+.grab-cursor {
+  cursor: url(grab.png) 8 8, move; }
+
+/* line 233, ../sass/royalslider.scss */
+.grabbing-cursor {
+  cursor: url(grabbing.png) 8 8, move; }
+
+/* line 237, ../sass/royalslider.scss */
+.rsNoDrag {
+  cursor: auto; }
+
+/* line 241, ../sass/royalslider.scss */
+.rsLink {
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 20;
+  background: url(blank.gif);
+  -webkit-backface-visibility: hidden; }
