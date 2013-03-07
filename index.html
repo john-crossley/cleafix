@@ -2,14 +2,23 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title> Home - .clearfix </title>
+	<!--// This title is dynamically set using JavaScript-->
+	<title> Home - clearfix - Web Development Agency </title>
 
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="We're a small web development agency from Manchester, England. We take pride in developing bespoke websites for our customers. We have a team of 6 people with a combined experience of 24 years.">
+	<meta name="author" content="John Crossley et al. for Clearfix">
 
-	<!--//STYLESHEETS-->
+
+	<!--
+	STYLESHEETS
+	Hi Richard/Jonathan, the slider is powered by RoyalSlider
+	(Which I purchased a license for here: http://dimsemenov.com/plugins/royal-slider/)
+	-->
 	<link rel="stylesheet" href="css/royalslider.css">
+	<!--
+	Our code in this stylesheet starts at line 99 (We use a reset) then the
+	rest of it is written in SASS.(You can view the SASS code here: https://github.com/john-crossley/cleafix)
+	-->
 	<link rel="stylesheet" href="css/style.css">
 
 	<!--[if lt IE 9]>
@@ -19,7 +28,7 @@
 </head>
 <body>
 
-	<div class="container">
+	<div class="container" id="home">
 
 		<header role="banner" id="stickyheader">
 			<div id="logo">
@@ -62,7 +71,7 @@
 
 			<div class="main-inner-lower" role="main">
 
-				<div class="about clearfix" id="home">
+				<div class="about clearfix">
 					<div class="content-left">
 						<h1> Hi, we are .clearfix </h1>
 						<p>
@@ -199,7 +208,7 @@
 
 					<!--//member one-->
 					<div class="member">
-						<img src="img/team-images/mcivor.png" alt="Adam Ross McIvor - Project Manager">
+						<img src="img/team-images/mcivor.jpg" alt="Adam Ross McIvor - Project Manager">
 						<div class="about-member">
 							<h4>Ross McIvor</h4>
 							<small>Project Manager</small>
@@ -212,7 +221,7 @@
 
 					<!--//member two-->
 					<div class="member">
-						<img src="img/team-images/crossley.png" alt="John Crossley - Lead Developer">
+						<img src="img/team-images/crossley.jpg" alt="John Crossley - Lead Developer">
 						<div class="about-member">
 							<h4>John Crossley</h4>
 							<small>Lead Developer</small>
@@ -225,7 +234,7 @@
 
 					<!--//member three-->
 					<div class="member">
-						<img src="img/team-images/mcavady.png" alt="James McAvady - UX &amp; Responsive Designer">
+						<img src="img/team-images/mcavady.jpg" alt="James McAvady - UX &amp; Responsive Designer">
 						<div class="about-member">
 							<h4>James McAvady</h4>
 							<small>UX &amp; Responsve Designer</small>
@@ -242,7 +251,7 @@
 
 					<!--//member four-->
 					<div class="member">
-						<img src="img/team-images/tandy.png" alt="Katie Tandy - Information Architect">
+						<img src="img/team-images/tandy.jpg" alt="Katie Tandy - Information Architect">
 						<div class="about-member">
 							<h4>Katie Tandy</h4>
 							<small>Information Architect</small>
@@ -255,7 +264,7 @@
 
 					<!--//member five-->
 					<div class="member">
-						<img src="img/team-images/kohli.png" alt="Bhavana Kohli - Information Architect">
+						<img src="img/team-images/kohli.jpg" alt="Bhavana Kohli - Information Architect">
 						<div class="about-member">
 							<h4>Bhavana Kohli</h4>
 							<small>Information Architect</small>
@@ -268,7 +277,7 @@
 
 					<!--//member six-->
 					<div class="member">
-						<img src="img/team-images/dattani.png" alt="Amar Dattani - Content &amp; Legal">
+						<img src="img/team-images/dattani.jpg" alt="Amar Dattani - Content &amp; Legal">
 						<div class="about-member">
 							<h4>Amar Dattani</h4>
 							<small>Content &amp; Legal</small>
@@ -355,9 +364,13 @@
 
 	</div><!--//container-->
 
+	<!--// This checks to see if we can pull jQuery from a CDN - If not then fetch the local copy -->
 	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/jquery-1.8.3.min.js"><\/script>')</script>
+	<!--// RoyalSlider - JS -->
 	<script src="js/jquery-royal-slider.min.js"></script>
+
+	<!--// CLEARFIXs OWN JavaScript -->
 	<script src="js/app.js"></script>
 </body>
 </html>
