@@ -26,7 +26,12 @@ $(document).ready( function() {
 
 	// The navigation
 	$('a[href=#home]').on('click', function() {
-		scroll_to($('#logo'), $(this));
+		scroll_to($('#home'), $(this));
+		return false;
+	});
+
+	$('a[href=#work]').on('click', function() {
+		scroll_to($('#work'), $(this));
 		return false;
 	});
 
@@ -72,6 +77,6 @@ function scroll_to(object, current) {
 	current.addClass('current'); // Add the current css class to the selected menu item.
 
 	$('html, body').animate({
-		scrollTop: object.offset().top//-($('header').height()*2)-50
+		scrollTop: object.offset().top-($('header').height()*2)-50
 	}, 600);
 }
