@@ -1,17 +1,47 @@
 $(document).ready( function() {
 
+	var sticky_navigation_offset_top = $('#stickyheader').offset().top;
+
+	var stickynavigation = function() {
+		var scroll_top = $(window).scrollTop();
+
+		$('#stickyheader').removeAttr("style");
+
+		if ( scroll_top > sticky_navigation_offset_top ) {
+			$('#stickyheader').addClass('stickyheader');
+		} else {
+			// $('#stickyheader').css({
+			// 	'position': 'relative'
+			// });
+			$('#stickyheader').removeClass();
+		}
+
+	};
+
+	stickynavigation();
+
+	$(window).scroll( function() {
+		stickynavigation();
+	});
+
 	// The navigation
+	$('a[href=#home]').on('click', function() {
+		scroll_to($('#logo'), $(this));
+		return false;
+	});
+
 	$('a[href=#team]').on('click', function() {
-		scroll_to($('#team'));
+		scroll_to($('#team'), $(this));
 		return false;
 	});
 
 	$('a[href=#about]').on('click', function() {
-		scroll_to($('#about'));
+		scroll_to($('#about'), $(this));
 		return false;
 	});
 
-	$('a[href=#about]').on('click', function() {
+	$('a[href=#contact]').on('click', function() {
+		scroll_to($('#contact'), $(this));
 		return false;
 	});
 
@@ -23,8 +53,8 @@ $(document).ready( function() {
 		autoScaleSlider: true,
 		autoScaleSliderWidth: 960,
 		autoScaleSliderHeight: 350,
-		controlNavigation: 'bullets',
-		thumbsFitInViewport: false,
+		// controlNavigation: 'none',
+		thumbsFitInViewport: true,
 		navigateByClick: true,
 		startSlideId: 0,
 		autoPlay: true,
@@ -37,8 +67,11 @@ $(document).ready( function() {
 	});
 })
 
-function scroll_to(object) {
+function scroll_to(object, current) {
+	$('a').removeClass('current'); // Remove all classes and apply current.
+	current.addClass('current'); // Add the current css class to the selected menu item.
+
 	$('html, body').animate({
-		scrollTop: object.offset().top
+		scrollTop: object.offset().top//-($('header').height()*2)-50
 	}, 600);
 }

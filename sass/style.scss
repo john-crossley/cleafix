@@ -25,17 +25,34 @@ body {
 	background: #fff;
 	background: rgba(255,255,255,0.8);
 	border: 1px solid #ccc;
-
 	-moz-box-shadow: 3px 3px 3px #ccc;
 	-webkit-box-shadow: 3px 3px 3px #ccc;
 	box-shadow: 3px 3px 3px #ccc;
 }
 
+.stickyheader {
+	position: fixed;
+	width: 950px;
+	max-width: 950px;
+	padding: 5px;
+	margin: 0 auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+	background: #fff;
+}
+
 header {
+	width: 950px;
 	margin-bottom: 1.5em;
 	border-bottom: 1px solid #ccc;
-	height: 90px;
-	padding: 10px;
+	height: 80px;
+	padding: 5px;
+	position: relative;
+
+	overflow: hidden;
+
 
 	hgroup h5 {
 		position: relative;
@@ -44,11 +61,16 @@ header {
 		text-transform: uppercase;
 	}
 
+	#logo {
+		position: relative;
+		bottom: 5px;
+	}
+
 	nav {
 		float: right;
 		position: relative;
-		bottom: 55px;
-		right: 50px;
+		bottom: 62px;
+		right: 30px;
 		text-transform: uppercase;
 	}
 
@@ -78,6 +100,12 @@ header {
 	}
 }
 
+.current {
+	border: 1px solid #b20f1f;
+	color: #fff;
+	background: #bd403e;
+}
+
 .main {
 	padding: 10px;
 	height: 100%;
@@ -88,38 +116,54 @@ header {
 	}
 
 	.content-left {
-
-
 		float: left;
 		width: 55%;
 		max-width: 55%;
 		position: relative;
 		bottom: 15px;
-
 		p {
 			width: 90%;
 		}
-
 	}
 
 	.content-right {
-
-
 		float: right;
 		width: 45%;
 		max-width: 45%;
-
 		position: relative;
-		bottom: 15px;
-
+		bottom: 10px;
 		ul {
 			list-style-type: square;
 			list-style-position: inside;
 			margin-bottom: 10px;
 		}
+	}
+
+	.work {
+		clear: both;
+		border-top: 1px solid #ddd;
+
+		.work-inner {
+			width: 92%;
+			margin: 0 5%;
+
+			.portfolio-item {
+				float: left;
+				margin: 10px;
+
+				> img {
+					border: 1px solid #ddd;
+				}
+			}
+
+		}
 
 	}
 
+}
+
+.royalSlider {
+	margin-bottom: 30px;
 }
 
 .team {
@@ -147,16 +191,12 @@ header {
 			-moz-transition-property: -moz-transform;
 			transition-property: transform;
 			overflow: hidden;
-			&:hover {
-				//-webkit-transform:rotate(-25deg);
-			  //-moz-transform:rotate(-25deg);
-			}
 		}
 
 	.team-inner {
 		width: 900px;
 		padding: 10px;
-		margin: 2em auto;
+		margin: 1em auto;
 
 		.member {
 			padding: 10px;
@@ -184,34 +224,69 @@ header {
 }
 
 footer {
-	height: 400px;
-	padding: 10px;
-	border-top: 1px solid #ddd;
-	// background: #f9f9f9;
 
-	.inner-footer-left {
-		width: 55%;
-		height: auto;
-		float: left;
-		padding: 10px;
+	.copyright {
+		border-top: 1px solid #ddd;
+		display: block;
+		text-align: center;
+		margin-bottom: 10px;
+		padding-top: 10px;
 	}
 
-	.inner-footer-right {
-		width: 40%;
+	.inner-footer {
+
+		h3 {
+			margin-left: 10px;
+		}
+
 		height: auto;
-		float: right;
 		padding: 10px;
-		text-align: right;
-		> img {
-			border: 1px solid #ccc;
+		border-top: 1px solid #ddd;
+
+		.inner-footer-left {
+			width: 55%;
+			height: auto;
+			float: left;
+			padding: 10px;
+			> p {
+				position: relative;
+				bottom: 15px;
+			}
+		}
+
+		.inner-footer-right {
+			width: 40%;
+			height: auto;
+			float: right;
+			padding: 10px;
+			text-align: right;
+			> img {
+				border: 1px solid #ccc;
+				position: relative;
+				bottom: 10px;
+			}
 		}
 	}
-
-
-
 }
 
-// form
+label {
+	color: $darkRedUnderline;
+	font-weight: bold;
+	font-size: small;
+}
+
+input[type=text], input[type=email], textarea {
+	border: 1px solid #ddd;
+	width: 250px;
+	padding: 5px;
+	font-size: 16px/18px;
+	outline: none;
+}
+
+textarea {
+	width: 300px;
+}
+
 button {
 	-webkit-appearance: none;
 	border-radius: 4px;
@@ -229,7 +304,7 @@ button {
 	-o-transition: all .3s ease-in-out;
 	transition: all .3s ease-in-out;
 
-	margin-top: 5px;
+	// margin-top: 5px;
 
 	&:hover {
 		background: #bd403e;
@@ -339,11 +414,12 @@ button {
 h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
 	color: #333;
+	text-transform: lowercase;
 }
 
 p {
-	margin: 0 0 8px 0;
-	padding: 0;
+	// margin: 0 0 8px 0;
+	// padding: 0;
 }
 
 h1 {
@@ -352,13 +428,15 @@ h1 {
 }
 
 h2 {
-	font-size: 2.2em;
-	margin-bottom: 8px;
+	font-size: 2em;
+	// margin-bottom: 8px;
+	margin-bottom: 5px;
 }
 
 h3 {
-	font-size: 1.8em;
-	margin-bottom: 8px;
+	// font-size: 1.8em;
+	// margin-bottom: 8px;
+	margin-bottom: 5px;
 }
 
 strong {

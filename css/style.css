@@ -114,21 +114,39 @@ body {
   -webkit-box-shadow: 3px 3px 3px #cccccc;
   box-shadow: 3px 3px 3px #cccccc; }
 
+.stickyheader {
+  position: fixed;
+  width: 950px;
+  max-width: 950px;
+  padding: 5px;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background: #fff; }
+
 header {
+  width: 950px;
   margin-bottom: 1.5em;
   border-bottom: 1px solid #cccccc;
-  height: 90px;
-  padding: 10px; }
+  height: 80px;
+  padding: 5px;
+  position: relative;
+  overflow: hidden; }
   header hgroup h5 {
     position: relative;
     left: 15px;
     font-size: small;
     text-transform: uppercase; }
+  header #logo {
+    position: relative;
+    bottom: 5px; }
   header nav {
     float: right;
     position: relative;
-    bottom: 55px;
-    right: 50px;
+    bottom: 62px;
+    right: 30px;
     text-transform: uppercase; }
   header ul {
     list-style: none; }
@@ -149,6 +167,11 @@ header {
         color: #fff;
         background: #bd403e; }
 
+.current {
+  border: 1px solid #b20f1f;
+  color: #fff;
+  background: #bd403e; }
+
 .main {
   padding: 10px;
   height: 100%;
@@ -168,11 +191,25 @@ header {
     width: 45%;
     max-width: 45%;
     position: relative;
-    bottom: 15px; }
+    bottom: 10px; }
     .main .content-right ul {
       list-style-type: square;
       list-style-position: inside;
       margin-bottom: 10px; }
+  .main .work {
+    clear: both;
+    border-top: 1px solid #dddddd; }
+    .main .work .work-inner {
+      width: 92%;
+      margin: 0 5%; }
+      .main .work .work-inner .portfolio-item {
+        float: left;
+        margin: 10px; }
+        .main .work .work-inner .portfolio-item > img {
+          border: 1px solid #dddddd; }
+
+.royalSlider {
+  margin-bottom: 30px; }
 
 .team {
   width: 100%;
@@ -198,7 +235,7 @@ header {
   .team .team-inner {
     width: 900px;
     padding: 10px;
-    margin: 2em auto; }
+    margin: 1em auto; }
     .team .team-inner .member {
       padding: 10px;
       width: 240px;
@@ -217,23 +254,51 @@ header {
         transition: all 0.3s ease-in-out;
         border: 4px solid #bd403e; }
 
-footer {
-  height: 400px;
+footer .copyright {
+  border-top: 1px solid #dddddd;
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+  padding-top: 10px; }
+footer .inner-footer {
+  height: auto;
   padding: 10px;
   border-top: 1px solid #dddddd; }
-  footer .inner-footer-left {
+  footer .inner-footer h3 {
+    margin-left: 10px; }
+  footer .inner-footer .inner-footer-left {
     width: 55%;
     height: auto;
     float: left;
     padding: 10px; }
-  footer .inner-footer-right {
+    footer .inner-footer .inner-footer-left > p {
+      position: relative;
+      bottom: 15px; }
+  footer .inner-footer .inner-footer-right {
     width: 40%;
     height: auto;
     float: right;
     padding: 10px;
     text-align: right; }
-    footer .inner-footer-right > img {
-      border: 1px solid #cccccc; }
+    footer .inner-footer .inner-footer-right > img {
+      border: 1px solid #cccccc;
+      position: relative;
+      bottom: 10px; }
+
+label {
+  color: #bd403e;
+  font-weight: bold;
+  font-size: small; }
+
+input[type=text], input[type=email], textarea {
+  border: 1px solid #dddddd;
+  width: 250px;
+  padding: 5px;
+  font-size: 16px/18px;
+  outline: none; }
+
+textarea {
+  width: 300px; }
 
 button {
   -webkit-appearance: none;
@@ -249,8 +314,7 @@ button {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  margin-top: 5px; }
+  transition: all 0.3s ease-in-out; }
   button:hover {
     background: #bd403e; }
 
@@ -339,23 +403,19 @@ button {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
-  color: #333; }
-
-p {
-  margin: 0 0 8px 0;
-  padding: 0; }
+  color: #333;
+  text-transform: lowercase; }
 
 h1 {
   font-size: 2.8em;
   margin-bottom: 8px; }
 
 h2 {
-  font-size: 2.2em;
-  margin-bottom: 8px; }
+  font-size: 2em;
+  margin-bottom: 5px; }
 
 h3 {
-  font-size: 1.8em;
-  margin-bottom: 8px; }
+  margin-bottom: 5px; }
 
 strong {
   color: #b20f1f; }
